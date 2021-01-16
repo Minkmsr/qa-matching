@@ -1,0 +1,25 @@
+.td-text-oneline {
+    width: 18rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.label-input-text {
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    padding: 0 1rem;
+}
+
+.label-input-text {
+    transition: all .2s ease-out;
+
+}
+
+.input-text:focus ~ .label-input-text {
+    transform: scale(.75) translateY(-39px);
+    background-color: #fff;
+}
