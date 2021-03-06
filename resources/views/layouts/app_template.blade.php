@@ -414,26 +414,26 @@
 <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            @foreach (app()->make('renderMenu')['result'] AS $key => $data_parent_menu)
-            <li class="nav-item">
-                <a href="{{ URL::to($data_parent_menu['parent_menus'][$key]['sys_menu_class_name']) }}">
-                    <i class="{{ $data_parent_menu['parent_menus'][$key]['sys_menu_icon'] }}"></i>
-                    <span class="menu-title" data-i18n="{{ $data_parent_menu['parent_menus'][$key]['sys_menu_name'] }}">
-                        {{ $data_parent_menu['parent_menus'][$key]['sys_menu_name'] }}
-                    </span></a>
-                    @if(isset($data_parent_menu['parent_menus'][$key]['sub_menus']) && count($data_parent_menu['parent_menus'][$key]['sub_menus']) > 0)
-                    <ul class="menu-content">
-                        @foreach ($data_parent_menu['parent_menus'][$key]['sub_menus'] AS $skey => $data_sub_menu)
+{{--            @foreach (app()->make('renderMenu')['result'] AS $key => $data_parent_menu)--}}
+{{--            <li class="nav-item">--}}
+{{--                <a href="{{ URL::to($data_parent_menu['parent_menus'][$key]['sys_menu_class_name']) }}">--}}
+{{--                    <i class="{{ $data_parent_menu['parent_menus'][$key]['sys_menu_icon'] }}"></i>--}}
+{{--                    <span class="menu-title" data-i18n="{{ $data_parent_menu['parent_menus'][$key]['sys_menu_name'] }}">--}}
+{{--                        {{ $data_parent_menu['parent_menus'][$key]['sys_menu_name'] }}--}}
+{{--                    </span></a>--}}
+{{--                    @if(isset($data_parent_menu['parent_menus'][$key]['sub_menus']) && count($data_parent_menu['parent_menus'][$key]['sub_menus']) > 0)--}}
+{{--                    <ul class="menu-content">--}}
+{{--                        @foreach ($data_parent_menu['parent_menus'][$key]['sub_menus'] AS $skey => $data_sub_menu)--}}
 
-                        <li><a class="menu-item" href="{{ URL::to($data_sub_menu['sys_menu_class_name']) }}"><i></i>
-                                <span data-i18n="{{ $data_sub_menu['sys_menu_name'] }}">{{ $data_sub_menu['sys_menu_name'] }}</span>
-                            </a>
-                        </li>
-                        @endforeach
-                    </ul>
-                    @endif
-            </li>
-            @endforeach
+{{--                        <li><a class="menu-item" href="{{ URL::to($data_sub_menu['sys_menu_class_name']) }}"><i></i>--}}
+{{--                                <span data-i18n="{{ $data_sub_menu['sys_menu_name'] }}">{{ $data_sub_menu['sys_menu_name'] }}</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        @endforeach--}}
+{{--                    </ul>--}}
+{{--                    @endif--}}
+{{--            </li>--}}
+{{--            @endforeach--}}
         </ul>
     </div>
 </div>
